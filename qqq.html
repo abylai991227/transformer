@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform</title>
+    <link rel="stylesheet" href="www.css">
+    <style>
+
+.rotate{
+    width: 100px;
+    height: 100px;
+    background-color: violet;
+    border: 1px solid brown;
+    transform: rotate(45deg);
+    margin-left: 500px ;
+    margin-top: 20px;
+}
+/* тут поворот на 45градус */
+.scale{
+    width: 150px;
+    height: 200px;
+    background-color: gray;
+    border: 1px solid rgb(10, 10, 10);
+    transform: scale(2);
+    margin-left: 500px ;
+    margin-top: 150px;
+}
+/* тут изменения маштаба на 2х */
+
+.translate{
+    width: 120px;
+    height: 220px;
+    background-color: red;
+    border: 1px solid  yellow;
+    transform: translate(500px,100px);
+    margin-left: 600px ;
+    margin-top: 150px;
+}
+/* смещения с исходного положения на лево 500пиксл вниз на 100пиксел  */
+.skew{
+    width: 300px;
+    height: 250px;
+    background-color: green;
+    border: 1px solid orangered ;
+    transform: skew(20deg,10deg);
+    margin-left: 50px ;
+  
+}
+/* тут налон на высота на 20градус а ширина на 10 градус */
+.transform {
+    width: 200px;
+    height: 100px;
+    background-color: #def604;
+    border: 1px solid rgb(9, 149, 23) ;
+    transition: transform 1s ease, background-color 1s ease;
+    margin-left: 100px;
+}
+/* тут в трансформации когда наводищь курсор и нажимаешь и увеличевается и поварачевает менят цет */
+.transform:hover {
+    transform: scale(5.2) rotate(50deg); 
+    background-color: #cf0b5d; 
+}
+.animation{   
+    width: 300px;
+    height: 250px;
+    background-color: rgb(139, 246, 8);
+    border: 1px solid rgb(8, 227, 243) ; 
+    margin-left: 700px ;
+    animation: pulse 5s infinite;
+}
+/* тут анимация пульсировный 5 секунд с бесконечным повтарением */
+@keyframes pulse{
+    0% {
+       transform: scale(5);
+       opacity: 0;
+       background-color: black;
+   }
+   /* тут у них трансформация на увелецения, прозрачность и цвет   */
+   50% {
+       transform: scale(2);
+       opacity: 2;
+       background-color: blue;
+   }
+   100% {
+       transform: scale(1);
+       opacity: 1;
+       background-color: red;
+   }
+
+}
+    </style>
+</head>
+<body>
+    
+    <div class="rotate">Поворот</div>
+
+    <div class="scale">Масштаб</div>
+
+    <div class="translate">Смещение</div>
+
+    <div class="skew">Наклон</div>
+
+    <div class="transform">Наведи на меня</div>
+
+    <div class="animation">Анимация</div>
+</body>
+</html>
